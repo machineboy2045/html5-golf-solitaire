@@ -1,3 +1,28 @@
+/*
+HTML5 Golf Solitaire
+Copyright 2013 Will Jensen
+
+https://github.com/themachineswillwin/html5-golf-solitaire
+
+machineboy2045@gmail.com
+
+This file is part of Fast HTML5 Golf Solitaire.
+
+HTML5 Golf Solitaire is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+HTML5 Golf Solitaire is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with HTML5 Golf Solitaire.  If not, see <http://www.gnu.org/licenses/>.
+*/
+
+
 $(window).ready(function(){
 	var CWIDTH = 100;
 	var CHEIGHT = 150;
