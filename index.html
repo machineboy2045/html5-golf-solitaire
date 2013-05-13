@@ -1,0 +1,253 @@
+
+<!doctype html>
+<html lang="en-us" dir="ltr" class="no-js">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=900" />
+<title>Golf Solitaire - by Will Jensen</title>
+<link rel="stylesheet" href="flip.css" />
+<link rel="stylesheet" href="main.css" />
+<script src="jquery1.9.js"></script>
+<script src="main.js"></script>
+<link href='http://fonts.googleapis.com/css?family=Bigelow+Rules|Germania+One' rel='stylesheet' type='text/css'>
+</head>
+
+<body>
+	<div id='loading'>
+		<h1 id='title'>Golf Solitaire</h1>
+		<div id='credit'>By Will Jensen 2013</div>
+		<div id="fountainTextG">
+			<div id="fountainTextG_1" class="fountainTextG">L</div>
+			<div id="fountainTextG_2" class="fountainTextG">o</div>
+			<div id="fountainTextG_3" class="fountainTextG">a</div>
+			<div id="fountainTextG_4" class="fountainTextG">d</div>
+			<div id="fountainTextG_5" class="fountainTextG">i</div>
+			<div id="fountainTextG_6" class="fountainTextG">n</div>
+			<div id="fountainTextG_7" class="fountainTextG">g</div>
+			<div id="fountainTextG_8" class="fountainTextG">.</div>
+			<div id="fountainTextG_9" class="fountainTextG">.</div>
+			<div id="fountainTextG_10" class="fountainTextG">.</div>
+		</div>
+	</div>
+	<div id="table">
+	   <div id="buttons">
+	      <div id="newGame" class="button">New Game</div>
+	      <div id="restart" class="button">Restart</div><br><br>
+	      <div id="loopCards" class="button">Ace <-> King</div>
+	   </div>
+	   <h2 id="cardsLeft"></h2>
+	   <div id="discardPile">
+		   Discard<br>
+		   (Tap to Undo)
+	   </div>
+	   <div class="card" id="as">
+	      <div class="front"><img src="cards_sm/back.jpg"></div>
+	      <div class="back"><img src="cards_sm/as.jpg"></div>
+	   </div>
+	   <div class="card" id="2s">
+	      <div class="front"><img src="cards_sm/back.jpg"></div>
+	      <div class="back"><img src="cards_sm/2s.jpg"></div>
+	   </div>
+	   <div class="card" id="3s">
+	      <div class="front"><img src="cards_sm/back.jpg"></div>
+	      <div class="back"><img src="cards_sm/3s.jpg"></div>
+	   </div>
+	   <div class="card" id="4s">
+	      <div class="front"><img src="cards_sm/back.jpg"></div>
+	      <div class="back"><img src="cards_sm/4s.jpg"></div>
+	   </div>
+	   <div class="card" id="5s">
+	      <div class="front"><img src="cards_sm/back.jpg"></div>
+	      <div class="back"><img src="cards_sm/5s.jpg"></div>
+	   </div>
+	   <div class="card" id="6s">
+	      <div class="front"><img src="cards_sm/back.jpg"></div>
+	      <div class="back"><img src="cards_sm/6s.jpg"></div>
+	   </div>
+	   <div class="card" id="7s">
+	      <div class="front"><img src="cards_sm/back.jpg"></div>
+	      <div class="back"><img src="cards_sm/7s.jpg"></div>
+	   </div>
+	   <div class="card" id="8s">
+	      <div class="front"><img src="cards_sm/back.jpg"></div>
+	      <div class="back"><img src="cards_sm/8s.jpg"></div>
+	   </div>
+	   <div class="card" id="9s">
+	      <div class="front"><img src="cards_sm/back.jpg"></div>
+	      <div class="back"><img src="cards_sm/9s.jpg"></div>
+	   </div>
+	   <div class="card" id="10s">
+	      <div class="front"><img src="cards_sm/back.jpg"></div>
+	      <div class="back"><img src="cards_sm/10s.jpg"></div>
+	   </div>
+	   <div class="card" id="js">
+	      <div class="front"><img src="cards_sm/back.jpg"></div>
+	      <div class="back"><img src="cards_sm/js.jpg"></div>
+	   </div>
+	   <div class="card" id="qs">
+	      <div class="front"><img src="cards_sm/back.jpg"></div>
+	      <div class="back"><img src="cards_sm/qs.jpg"></div>
+	   </div>
+	   <div class="card" id="ks">
+	      <div class="front"><img src="cards_sm/back.jpg"></div>
+	      <div class="back"><img src="cards_sm/ks.jpg"></div>
+	   </div>
+	   <div class="card" id="ac">
+	      <div class="front"><img src="cards_sm/back.jpg"></div>
+	      <div class="back"><img src="cards_sm/ac.jpg"></div>
+	   </div>
+	   <div class="card" id="2c">
+	      <div class="front"><img src="cards_sm/back.jpg"></div>
+	      <div class="back"><img src="cards_sm/2c.jpg"></div>
+	   </div>
+	   <div class="card" id="3c">
+	      <div class="front"><img src="cards_sm/back.jpg"></div>
+	      <div class="back"><img src="cards_sm/3c.jpg"></div>
+	   </div>
+	   <div class="card" id="4c">
+	      <div class="front"><img src="cards_sm/back.jpg"></div>
+	      <div class="back"><img src="cards_sm/4c.jpg"></div>
+	   </div>
+	   <div class="card" id="5c">
+	      <div class="front"><img src="cards_sm/back.jpg"></div>
+	      <div class="back"><img src="cards_sm/5c.jpg"></div>
+	   </div>
+	   <div class="card" id="6c">
+	      <div class="front"><img src="cards_sm/back.jpg"></div>
+	      <div class="back"><img src="cards_sm/6c.jpg"></div>
+	   </div>
+	   <div class="card" id="7c">
+	      <div class="front"><img src="cards_sm/back.jpg"></div>
+	      <div class="back"><img src="cards_sm/7c.jpg"></div>
+	   </div>
+	   <div class="card" id="8c">
+	      <div class="front"><img src="cards_sm/back.jpg"></div>
+	      <div class="back"><img src="cards_sm/8c.jpg"></div>
+	   </div>
+	   <div class="card" id="9c">
+	      <div class="front"><img src="cards_sm/back.jpg"></div>
+	      <div class="back"><img src="cards_sm/9c.jpg"></div>
+	   </div>
+	   <div class="card" id="10c">
+	      <div class="front"><img src="cards_sm/back.jpg"></div>
+	      <div class="back"><img src="cards_sm/10c.jpg"></div>
+	   </div>
+	   <div class="card" id="jc">
+	      <div class="front"><img src="cards_sm/back.jpg"></div>
+	      <div class="back"><img src="cards_sm/jc.jpg"></div>
+	   </div>
+	   <div class="card" id="qc">
+	      <div class="front"><img src="cards_sm/back.jpg"></div>
+	      <div class="back"><img src="cards_sm/qc.jpg"></div>
+	   </div>
+	   <div class="card" id="kc">
+	      <div class="front"><img src="cards_sm/back.jpg"></div>
+	      <div class="back"><img src="cards_sm/kc.jpg"></div>
+	   </div>
+	   <div class="card" id="ah">
+	      <div class="front"><img src="cards_sm/back.jpg"></div>
+	      <div class="back"><img src="cards_sm/ah.jpg"></div>
+	   </div>
+	   <div class="card" id="2h">
+	      <div class="front"><img src="cards_sm/back.jpg"></div>
+	      <div class="back"><img src="cards_sm/2h.jpg"></div>
+	   </div>
+	   <div class="card" id="3h">
+	      <div class="front"><img src="cards_sm/back.jpg"></div>
+	      <div class="back"><img src="cards_sm/3h.jpg"></div>
+	   </div>
+	   <div class="card" id="4h">
+	      <div class="front"><img src="cards_sm/back.jpg"></div>
+	      <div class="back"><img src="cards_sm/4h.jpg"></div>
+	   </div>
+	   <div class="card" id="5h">
+	      <div class="front"><img src="cards_sm/back.jpg"></div>
+	      <div class="back"><img src="cards_sm/5h.jpg"></div>
+	   </div>
+	   <div class="card" id="6h">
+	      <div class="front"><img src="cards_sm/back.jpg"></div>
+	      <div class="back"><img src="cards_sm/6h.jpg"></div>
+	   </div>
+	   <div class="card" id="7h">
+	      <div class="front"><img src="cards_sm/back.jpg"></div>
+	      <div class="back"><img src="cards_sm/7h.jpg"></div>
+	   </div>
+	   <div class="card" id="8h">
+	      <div class="front"><img src="cards_sm/back.jpg"></div>
+	      <div class="back"><img src="cards_sm/8h.jpg"></div>
+	   </div>
+	   <div class="card" id="9h">
+	      <div class="front"><img src="cards_sm/back.jpg"></div>
+	      <div class="back"><img src="cards_sm/9h.jpg"></div>
+	   </div>
+	   <div class="card" id="10h">
+	      <div class="front"><img src="cards_sm/back.jpg"></div>
+	      <div class="back"><img src="cards_sm/10h.jpg"></div>
+	   </div>
+	   <div class="card" id="jh">
+	      <div class="front"><img src="cards_sm/back.jpg"></div>
+	      <div class="back"><img src="cards_sm/jh.jpg"></div>
+	   </div>
+	   <div class="card" id="qh">
+	      <div class="front"><img src="cards_sm/back.jpg"></div>
+	      <div class="back"><img src="cards_sm/qh.jpg"></div>
+	   </div>
+	   <div class="card" id="kh">
+	      <div class="front"><img src="cards_sm/back.jpg"></div>
+	      <div class="back"><img src="cards_sm/kh.jpg"></div>
+	   </div>
+	   <div class="card" id="ad">
+	      <div class="front"><img src="cards_sm/back.jpg"></div>
+	      <div class="back"><img src="cards_sm/ad.jpg"></div>
+	   </div>
+	   <div class="card" id="2d">
+	      <div class="front"><img src="cards_sm/back.jpg"></div>
+	      <div class="back"><img src="cards_sm/2d.jpg"></div>
+	   </div>
+	   <div class="card" id="3d">
+	      <div class="front"><img src="cards_sm/back.jpg"></div>
+	      <div class="back"><img src="cards_sm/3d.jpg"></div>
+	   </div>
+	   <div class="card" id="4d">
+	      <div class="front"><img src="cards_sm/back.jpg"></div>
+	      <div class="back"><img src="cards_sm/4d.jpg"></div>
+	   </div>
+	   <div class="card" id="5d">
+	      <div class="front"><img src="cards_sm/back.jpg"></div>
+	      <div class="back"><img src="cards_sm/5d.jpg"></div>
+	   </div>
+	   <div class="card" id="6d">
+	      <div class="front"><img src="cards_sm/back.jpg"></div>
+	      <div class="back"><img src="cards_sm/6d.jpg"></div>
+	   </div>
+	   <div class="card" id="7d">
+	      <div class="front"><img src="cards_sm/back.jpg"></div>
+	      <div class="back"><img src="cards_sm/7d.jpg"></div>
+	   </div>
+	   <div class="card" id="8d">
+	      <div class="front"><img src="cards_sm/back.jpg"></div>
+	      <div class="back"><img src="cards_sm/8d.jpg"></div>
+	   </div>
+	   <div class="card" id="9d">
+	      <div class="front"><img src="cards_sm/back.jpg"></div>
+	      <div class="back"><img src="cards_sm/9d.jpg"></div>
+	   </div>
+	   <div class="card" id="10d">
+	      <div class="front"><img src="cards_sm/back.jpg"></div>
+	      <div class="back"><img src="cards_sm/10d.jpg"></div>
+	   </div>
+	   <div class="card" id="jd">
+	      <div class="front"><img src="cards_sm/back.jpg"></div>
+	      <div class="back"><img src="cards_sm/jd.jpg"></div>
+	   </div>
+	   <div class="card" id="qd">
+	      <div class="front"><img src="cards_sm/back.jpg"></div>
+	      <div class="back"><img src="cards_sm/qd.jpg"></div>
+	   </div>
+	   <div class="card" id="kd">
+	      <div class="front"><img src="cards_sm/back.jpg"></div>
+	      <div class="back"><img src="cards_sm/kd.jpg"></div>
+	   </div>
+	</div>
+</body>
+</html>

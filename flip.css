@@ -1,0 +1,128 @@
+		.card {
+			position: absolute;
+			left:0;
+			top:350px;
+			text-align: center;
+			z-index: 2;
+			/*background: blue;*/
+			/*border: 8px solid white;*/
+
+			-webkit-perspective: 600px;
+			-moz-perspective: 600px;
+
+			-webkit-transform-style: preserve-3d;
+			-webkit-backface-visibility: hidden;
+
+
+			/* -- transition is the magic sauce for animation -- */
+			/*-o-transition: all .4s ease-in-out;
+			-ms-transition: all .4s ease-in-out;
+			-moz-transition: all .4s ease-in-out;*/
+			/*-webkit-transition: translate3d .4s ease-in-out;*/
+			/*transition: all .4s ease-in-out;		*/
+
+			-webkit-transition-timing-function: ease-in-out;
+			-webkit-transition-duration: .4s;
+			/*-moz-transition: z-index 0;*/
+
+			-webkit-transition-property:-webkit-transform;
+
+		}
+		.card img, .card{
+			width: 96px;
+			height: 150px;
+		}
+
+		.back, .front{
+			border-radius: 8px;
+			overflow:hidden;
+		}
+		.back, .front{
+			padding: 5px 2px;
+			background: white;
+		}
+
+		.back.shadow{
+			-webkit-box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.26);
+			/*box-shadow: 0px -2px 14px #2D521C;*/
+
+		}
+		/* -- make sure to declare a default for every property that you want animated -- */
+		/* -- general styles, including Y axis rotation -- */
+		.card .front {
+			position: absolute;
+			top: 0;
+			left: 0;
+			z-index: 900;
+			width: inherit;
+			height: inherit;
+			text-align: center;
+			/*background-image: -webkit-linear-gradient(#2D5EA8, #004A6D);*/
+
+
+
+
+
+
+			-webkit-transform: rotateX(0deg) rotateY(0deg);
+			-webkit-transform-style: preserve-3d;
+			-webkit-backface-visibility: hidden;
+
+			-moz-transform: rotateX(0deg) rotateY(0deg);
+			-moz-transform-style: preserve-3d;
+			-moz-backface-visibility: hidden;
+
+			/* -- transition is the magic sauce for animation -- */
+			-o-transition: all .4s ease-in-out;
+			-ms-transition: all .4s ease-in-out;
+			-moz-transition: all .4s ease-in-out;
+			-webkit-transition: all .4s ease-in-out;
+			transition: all .4s ease-in-out;
+		}
+		.card.flip .front {
+			z-index: 900;
+
+			-webkit-transform: rotateY(180deg);
+			-moz-transform: rotateY(180deg);
+			
+		}
+
+		.card .front img{
+			width: 90px;
+			height: 148px;
+			margin-top: 1px;
+		}
+		
+		.card .back {
+			position: absolute;
+			top: 0;
+			left: 0;
+			z-index: 800;
+			width: inherit;
+			height: inherit;
+			/*background-image: -webkit-linear-gradient(#E9E9E9, #CECECE);*/
+			/*-webkit-box-shadow:5px 5px 5px rgba(0,0,0,0.3);*/
+
+			
+			-webkit-transform: rotateY(-180deg);
+			-webkit-transform-style: preserve-3d;
+			-webkit-backface-visibility: hidden;
+
+			-moz-transform: rotateY(-180deg);
+			-moz-transform-style: preserve-3d;
+			-moz-backface-visibility: hidden;
+
+			/* -- transition is the magic sauce for animation -- */
+			-o-transition: all .4s ease-in-out;
+			-ms-transition: all .4s ease-in-out;
+			-moz-transition: all .4s ease-in-out;
+			-webkit-transition: all .4s ease-in-out;
+			transition: all .4s ease-in-out;
+		}
+		
+		.card.flip .back {
+			z-index: 1000;
+
+			-webkit-transform: rotateX(0deg) rotateY(0deg);
+			-moz-transform: rotateX(0deg) rotateY(0deg);
+		}

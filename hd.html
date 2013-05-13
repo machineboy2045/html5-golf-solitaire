@@ -1,0 +1,253 @@
+
+<!doctype html>
+<html lang="en-us" dir="ltr" class="no-js">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=900" />
+<title>Golf Solitaire - by Will Jensen</title>
+<link rel="stylesheet" href="flip.css" />
+<link rel="stylesheet" href="main.css" />
+<script src="jquery1.9.js"></script>
+<script src="main.js"></script>
+<link href='http://fonts.googleapis.com/css?family=Bigelow+Rules|Germania+One' rel='stylesheet' type='text/css'>
+</head>
+
+<body>
+	<div id='loading'>
+		<h1 id='title'>Golf Solitaire</h1>
+		<div id='credit'>By Will Jensen 2013</div>
+		<div id="fountainTextG">
+			<div id="fountainTextG_1" class="fountainTextG">L</div>
+			<div id="fountainTextG_2" class="fountainTextG">o</div>
+			<div id="fountainTextG_3" class="fountainTextG">a</div>
+			<div id="fountainTextG_4" class="fountainTextG">d</div>
+			<div id="fountainTextG_5" class="fountainTextG">i</div>
+			<div id="fountainTextG_6" class="fountainTextG">n</div>
+			<div id="fountainTextG_7" class="fountainTextG">g</div>
+			<div id="fountainTextG_8" class="fountainTextG">.</div>
+			<div id="fountainTextG_9" class="fountainTextG">.</div>
+			<div id="fountainTextG_10" class="fountainTextG">.</div>
+		</div>
+	</div>
+	<div id="table">
+	   <div id="buttons">
+	      <div id="newGame" class="button">New Game</div>
+	      <div id="restart" class="button">Restart</div><br><br>
+	      <div id="loopCards" class="button">Ace <-> King</div>
+	   </div>
+	   <h2 id="cardsLeft"></h2>
+	   <div id="discardPile">
+		   Discard<br>
+		   (Tap to Undo)
+	   </div>
+	   <div class="card" id="as">
+	      <div class="front"><img src="cards/back.jpg"></div>
+	      <div class="back"><img src="cards/as.jpg"></div>
+	   </div>
+	   <div class="card" id="2s">
+	      <div class="front"><img src="cards/back.jpg"></div>
+	      <div class="back"><img src="cards/2s.jpg"></div>
+	   </div>
+	   <div class="card" id="3s">
+	      <div class="front"><img src="cards/back.jpg"></div>
+	      <div class="back"><img src="cards/3s.jpg"></div>
+	   </div>
+	   <div class="card" id="4s">
+	      <div class="front"><img src="cards/back.jpg"></div>
+	      <div class="back"><img src="cards/4s.jpg"></div>
+	   </div>
+	   <div class="card" id="5s">
+	      <div class="front"><img src="cards/back.jpg"></div>
+	      <div class="back"><img src="cards/5s.jpg"></div>
+	   </div>
+	   <div class="card" id="6s">
+	      <div class="front"><img src="cards/back.jpg"></div>
+	      <div class="back"><img src="cards/6s.jpg"></div>
+	   </div>
+	   <div class="card" id="7s">
+	      <div class="front"><img src="cards/back.jpg"></div>
+	      <div class="back"><img src="cards/7s.jpg"></div>
+	   </div>
+	   <div class="card" id="8s">
+	      <div class="front"><img src="cards/back.jpg"></div>
+	      <div class="back"><img src="cards/8s.jpg"></div>
+	   </div>
+	   <div class="card" id="9s">
+	      <div class="front"><img src="cards/back.jpg"></div>
+	      <div class="back"><img src="cards/9s.jpg"></div>
+	   </div>
+	   <div class="card" id="10s">
+	      <div class="front"><img src="cards/back.jpg"></div>
+	      <div class="back"><img src="cards/10s.jpg"></div>
+	   </div>
+	   <div class="card" id="js">
+	      <div class="front"><img src="cards/back.jpg"></div>
+	      <div class="back"><img src="cards/js.jpg"></div>
+	   </div>
+	   <div class="card" id="qs">
+	      <div class="front"><img src="cards/back.jpg"></div>
+	      <div class="back"><img src="cards/qs.jpg"></div>
+	   </div>
+	   <div class="card" id="ks">
+	      <div class="front"><img src="cards/back.jpg"></div>
+	      <div class="back"><img src="cards/ks.jpg"></div>
+	   </div>
+	   <div class="card" id="ac">
+	      <div class="front"><img src="cards/back.jpg"></div>
+	      <div class="back"><img src="cards/ac.jpg"></div>
+	   </div>
+	   <div class="card" id="2c">
+	      <div class="front"><img src="cards/back.jpg"></div>
+	      <div class="back"><img src="cards/2c.jpg"></div>
+	   </div>
+	   <div class="card" id="3c">
+	      <div class="front"><img src="cards/back.jpg"></div>
+	      <div class="back"><img src="cards/3c.jpg"></div>
+	   </div>
+	   <div class="card" id="4c">
+	      <div class="front"><img src="cards/back.jpg"></div>
+	      <div class="back"><img src="cards/4c.jpg"></div>
+	   </div>
+	   <div class="card" id="5c">
+	      <div class="front"><img src="cards/back.jpg"></div>
+	      <div class="back"><img src="cards/5c.jpg"></div>
+	   </div>
+	   <div class="card" id="6c">
+	      <div class="front"><img src="cards/back.jpg"></div>
+	      <div class="back"><img src="cards/6c.jpg"></div>
+	   </div>
+	   <div class="card" id="7c">
+	      <div class="front"><img src="cards/back.jpg"></div>
+	      <div class="back"><img src="cards/7c.jpg"></div>
+	   </div>
+	   <div class="card" id="8c">
+	      <div class="front"><img src="cards/back.jpg"></div>
+	      <div class="back"><img src="cards/8c.jpg"></div>
+	   </div>
+	   <div class="card" id="9c">
+	      <div class="front"><img src="cards/back.jpg"></div>
+	      <div class="back"><img src="cards/9c.jpg"></div>
+	   </div>
+	   <div class="card" id="10c">
+	      <div class="front"><img src="cards/back.jpg"></div>
+	      <div class="back"><img src="cards/10c.jpg"></div>
+	   </div>
+	   <div class="card" id="jc">
+	      <div class="front"><img src="cards/back.jpg"></div>
+	      <div class="back"><img src="cards/jc.jpg"></div>
+	   </div>
+	   <div class="card" id="qc">
+	      <div class="front"><img src="cards/back.jpg"></div>
+	      <div class="back"><img src="cards/qc.jpg"></div>
+	   </div>
+	   <div class="card" id="kc">
+	      <div class="front"><img src="cards/back.jpg"></div>
+	      <div class="back"><img src="cards/kc.jpg"></div>
+	   </div>
+	   <div class="card" id="ah">
+	      <div class="front"><img src="cards/back.jpg"></div>
+	      <div class="back"><img src="cards/ah.jpg"></div>
+	   </div>
+	   <div class="card" id="2h">
+	      <div class="front"><img src="cards/back.jpg"></div>
+	      <div class="back"><img src="cards/2h.jpg"></div>
+	   </div>
+	   <div class="card" id="3h">
+	      <div class="front"><img src="cards/back.jpg"></div>
+	      <div class="back"><img src="cards/3h.jpg"></div>
+	   </div>
+	   <div class="card" id="4h">
+	      <div class="front"><img src="cards/back.jpg"></div>
+	      <div class="back"><img src="cards/4h.jpg"></div>
+	   </div>
+	   <div class="card" id="5h">
+	      <div class="front"><img src="cards/back.jpg"></div>
+	      <div class="back"><img src="cards/5h.jpg"></div>
+	   </div>
+	   <div class="card" id="6h">
+	      <div class="front"><img src="cards/back.jpg"></div>
+	      <div class="back"><img src="cards/6h.jpg"></div>
+	   </div>
+	   <div class="card" id="7h">
+	      <div class="front"><img src="cards/back.jpg"></div>
+	      <div class="back"><img src="cards/7h.jpg"></div>
+	   </div>
+	   <div class="card" id="8h">
+	      <div class="front"><img src="cards/back.jpg"></div>
+	      <div class="back"><img src="cards/8h.jpg"></div>
+	   </div>
+	   <div class="card" id="9h">
+	      <div class="front"><img src="cards/back.jpg"></div>
+	      <div class="back"><img src="cards/9h.jpg"></div>
+	   </div>
+	   <div class="card" id="10h">
+	      <div class="front"><img src="cards/back.jpg"></div>
+	      <div class="back"><img src="cards/10h.jpg"></div>
+	   </div>
+	   <div class="card" id="jh">
+	      <div class="front"><img src="cards/back.jpg"></div>
+	      <div class="back"><img src="cards/jh.jpg"></div>
+	   </div>
+	   <div class="card" id="qh">
+	      <div class="front"><img src="cards/back.jpg"></div>
+	      <div class="back"><img src="cards/qh.jpg"></div>
+	   </div>
+	   <div class="card" id="kh">
+	      <div class="front"><img src="cards/back.jpg"></div>
+	      <div class="back"><img src="cards/kh.jpg"></div>
+	   </div>
+	   <div class="card" id="ad">
+	      <div class="front"><img src="cards/back.jpg"></div>
+	      <div class="back"><img src="cards/ad.jpg"></div>
+	   </div>
+	   <div class="card" id="2d">
+	      <div class="front"><img src="cards/back.jpg"></div>
+	      <div class="back"><img src="cards/2d.jpg"></div>
+	   </div>
+	   <div class="card" id="3d">
+	      <div class="front"><img src="cards/back.jpg"></div>
+	      <div class="back"><img src="cards/3d.jpg"></div>
+	   </div>
+	   <div class="card" id="4d">
+	      <div class="front"><img src="cards/back.jpg"></div>
+	      <div class="back"><img src="cards/4d.jpg"></div>
+	   </div>
+	   <div class="card" id="5d">
+	      <div class="front"><img src="cards/back.jpg"></div>
+	      <div class="back"><img src="cards/5d.jpg"></div>
+	   </div>
+	   <div class="card" id="6d">
+	      <div class="front"><img src="cards/back.jpg"></div>
+	      <div class="back"><img src="cards/6d.jpg"></div>
+	   </div>
+	   <div class="card" id="7d">
+	      <div class="front"><img src="cards/back.jpg"></div>
+	      <div class="back"><img src="cards/7d.jpg"></div>
+	   </div>
+	   <div class="card" id="8d">
+	      <div class="front"><img src="cards/back.jpg"></div>
+	      <div class="back"><img src="cards/8d.jpg"></div>
+	   </div>
+	   <div class="card" id="9d">
+	      <div class="front"><img src="cards/back.jpg"></div>
+	      <div class="back"><img src="cards/9d.jpg"></div>
+	   </div>
+	   <div class="card" id="10d">
+	      <div class="front"><img src="cards/back.jpg"></div>
+	      <div class="back"><img src="cards/10d.jpg"></div>
+	   </div>
+	   <div class="card" id="jd">
+	      <div class="front"><img src="cards/back.jpg"></div>
+	      <div class="back"><img src="cards/jd.jpg"></div>
+	   </div>
+	   <div class="card" id="qd">
+	      <div class="front"><img src="cards/back.jpg"></div>
+	      <div class="back"><img src="cards/qd.jpg"></div>
+	   </div>
+	   <div class="card" id="kd">
+	      <div class="front"><img src="cards/back.jpg"></div>
+	      <div class="back"><img src="cards/kd.jpg"></div>
+	   </div>
+	</div>
+</body>
+</html>
