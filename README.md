@@ -6,8 +6,7 @@ If you use this code to make other card games I'd love to see your work!
 
 Demo
 ------------------
-You can see a <a href='http://demos.bitgeni.us/solitaire'>demo here</a>
-and an <a href='http://demos.bitgeni.us/solitaire/hd.html'>HD demo here</a> (optimized for iPad).
+Try the <a href='http://embed.plnkr.co/Vwx46TKqisiArkl6dWqu'>plnkr</a>
 
 
 Artwork
